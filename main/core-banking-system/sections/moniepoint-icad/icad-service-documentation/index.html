@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Core Banking System | Moniepoint Core System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css" rel="stylesheet">
+    <link href="../../../../../style.css" rel="stylesheet">
+    <link href="./../../../../style-branding.css" rel="stylesheet">
+    <script type="text/javascript" src="../../../../../modal.js"></script>
+    <script type="text/javascript" src="../../../../../svg-modal.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.2/dist/svg-pan-zoom.min.js"></script>
+    <link href="../../../../../admonition.css" rel="stylesheet">
+
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+        
+            <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+        
+            <script>
+            window.WebFontConfig = {
+                custom: {
+                families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+                    'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+                    'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+                    'KaTeX_Size4', 'KaTeX_Typewriter'],
+                },
+            };
+            </script>
+            <script defer src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js" crossorigin="anonymous"></script>
+            <link href="../../../../site/favicon.ico" rel="icon" type="image/ico">
+    <link href="../../../../site/custom.css" rel="stylesheet">
+  </head>
+  <body>
+    <script type="text/javascript" src="../../../../../header.js"></script>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand has-site-branding"><a href="../../../../" class="navbar-item"><img alt="Moniepoint Core System" src="../../../../site/logo.png"></a><a href="../../../../" class="navbar-item"><span class="has-text-weight-semibold has-site-branding">Moniepoint Core System</span></a></div>
+      <div class="navbar-menu has-site-branding">
+        <div class="navbar-end">
+          <div class="navbar-item"><input class="input is-small is-rounded" id="search" type="search" size="30" maxlength="50" placeholder="Search..." onkeyup="redirect(event, value, '../../../../search/')"></div>
+          <div class="navbar-item has-dropdown is-hoverable"><a class="navbar-link has-site-branding">main</a>
+            <div class="navbar-dropdown is-right"><a href="../../../../../main/" class="navbar-item">main</a>
+              <hr class="navbar-divider">
+              <div class="navbar-item has-text-grey-light"><span>v</span><span>0.0.0</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="site-layout" id="site">
+      <aside class="menu p-3">
+        <p class="menu-label">General</p>
+        <ul class="menu-list has-site-branding">
+          <li><a href="../../../../" class="">Home</a><a href="../../../../decisions/" class="">Decisions</a><a href="../../../../software-systems/" class="">Software Systems</a><a href="../../../../embedding-diagrams-and-images/" class="">Embedding diagrams and images</a></li>
+        </ul>
+        <p class="menu-label">Software systems</p>
+        <ul class="menu-list has-site-branding">
+          <li><a href="../../../../card-services/" class="">Card Services</a><a href="../../../" class="is-active">Core Banking System</a><a href="../../../../customer-onboarding/" class="">Customer Onboarding</a><a href="../../../../moniepoint-fx/" class="">Moniepoint FX</a><a href="../../../../value-added-services-(vas)/" class="">Value Added Services (VAS)</a></li>
+        </ul>
+      </aside>
+      <div class="container is-fluid">
+        <h1 class="title mt-3">Core Banking System</h1>
+        <h2 class="subtitle">Kuwego Core Banking System is the central foundation of MoniePoint's banking operations</h2>
+        <div class="tabs mt-3">
+          <ul class="is-flex-wrap-wrap is-flex-shrink-1 is-flex-grow-0">
+            <li><a href="../../../" class="">Info</a></li>
+            <li><a href="../../../context/" class="">Context views</a></li>
+            <li><a href="../../../container/" class="">Container views</a></li>
+            <li><a href="../../../dependencies/" class="">Dependencies</a></li>
+            <li><a href="../../../decisions/" class="">Decisions</a></li>
+            <li class="is-active"><a href="../../" class="is-active">Documentation</a></li>
+          </ul>
+        </div>
+        <div class="content p-3">
+          <div><h1 id="icad-service-documentation"><a href="#icad-service-documentation" id="icad-service-documentation">ICAD Service Documentation</a></h1>
+<h2 id="1-overview"><a href="#1-overview" id="1-overview">1. Overview</a></h2>
+<p>The <strong>ICAD Engine</strong> is designed to register new customer accounts on NIBSS’s Industry Customer Account Database (ICAD) following a CBN directive for all banks to submit all customer account details to NIBSS to improve the efficiency and safety of electronic payments in Nigeria.</p>
+<p>The service responsible for processing branch and account creation events from the Core Banking Application (CBA) and submitting the branch and account details to the ICAD system. The service ensures proper integration with the NIBSS ICAD system and manages the lifecycle of branch and account records, from creation to successful submission.</p>
+<ul>
+ <li><strong>Key Functions</strong>: 
+  <ul>
+   <li>Subscription to branch and account creation events via Kafka.</li>
+   <li>Enriching account data with necessary details needed for upload</li>
+   <li>Asynchronous processing of branch and account uploads.</li>
+   <li>Handling retries for failed or inconclusive uploads.</li>
+   <li>Monitoring of branch and account upload statuses and reprocessing as necessary.</li>
+  </ul></li>
+</ul>
+<h2 id="2-service-architecture-c4-model-level"><a href="#2-service-architecture-c4-model-level" id="2-service-architecture-c4-model-level">2. Service Architecture (C4 Model Level)</a></h2>
+<h3 id="system-context-c4-level-1"><a href="#system-context-c4-level-1" id="system-context-c4-level-1">System Context (C4 Level 1)</a></h3>
+<p>At the system level, the ICAD service interacts with:</p>
+<ul>
+ <li><strong>Core Banking Application (CBA)</strong>: Publishes branch and account creation events.</li>
+ <li><strong>ICAD System</strong>: Receives branch and account creation requests.</li>
+ <li><strong>NIBSS</strong>: Destination for account and branch created.</li>
+ <li><strong>Kafka</strong>: Acts as a messaging queue between CBA and ICAD service.</li>
+</ul>
+<h3 id="container-diagram-c4-level-2"><a href="#container-diagram-c4-level-2" id="container-diagram-c4-level-2">Container Diagram (C4 Level 2)</a></h3>
+<p>ICAD consists of the following containers:</p>
+<ul>
+ <li><strong>Kafka Consumer</strong>: Consumes branch creation events.</li>
+ <li><strong>ICAD Processor</strong>: Processes branch details and submits them to ICAD.</li>
+ <li><strong>Database</strong>: Stores branch details, upload statuses, and retry attempts.</li>
+ <li><strong>ICAD Upload Queue</strong>: Handles asynchronous submission and retries.</li>
+</ul>
+<h2 id="3-kafka-subscription"><a href="#3-kafka-subscription" id="3-kafka-subscription">3. Kafka Subscription</a></h2>
+<p>The ICAD service subscribes to a Kafka topic where branch creation events are published by the CBA system.</p>
+<ul>
+ <li><strong>Kafka Topic</strong>: Configurable based on the environment (dev, staging, prod).</li>
+ <li><strong>Branch Message Format</strong>:</li>
+</ul>
+<pre><code class="language-json">{
+    "id": 1,
+    "code": "TOS",
+    "name": "Tospin Branch",
+    "address_line_one": "1, Fake Avenue",
+    "address_line_two": "Off Alien Road",
+    "city": "Guess",
+    "status": 1,
+    "created_on": 1706794906000,
+    "last_modified_on": 1706794906000
+}
+</code></pre>
+<ul>
+ <li><strong>Account Message Format</strong></li>
+</ul>
+<pre><code class="language-json">{
+    "nuban_account_number": "1234567890",
+    "created_on": "2023-09-24T12:00:00Z",
+    "last_modified_on": "2023-09-24T12:00:00Z"
+}
+</code></pre>
+<h2 id="4-branch-creation-logic"><a href="#4-branch-creation-logic" id="4-branch-creation-logic">4. Branch Creation Logic</a></h2>
+<h3 id="step-1-check-for-existing-branch-code"><a href="#step-1-check-for-existing-branch-code" id="step-1-check-for-existing-branch-code">Step 1: Check for Existing Branch Code</a></h3>
+<p>The system checks if the branch code already exists in the database. If it exists, the message is acknowledged without further processing.</p>
+<h3 id="step-2-generate-icad-branch-code"><a href="#step-2-generate-icad-branch-code" id="step-2-generate-icad-branch-code">Step 2: Generate ICAD Branch Code</a></h3>
+<p>The service generates a 9-digit ICAD branch code using the formula:</p>
+<ul>
+ <li><strong>ICAD Branch Code</strong> = <code>&lt;institution_code&gt;</code> + left-padded <code>&lt;branch_id&gt;</code> (9 digits total).</li>
+ <li>Example: Given <code>institution_code = 50666</code> and <code>branch_id = 3</code>, the resulting ICAD branch code is <code>506660003</code>.</li>
+</ul>
+<h3 id="step-3-persist-branch-details"><a href="#step-3-persist-branch-details" id="step-3-persist-branch-details">Step 3: Persist Branch Details</a></h3>
+<p>The branch details are stored in the database after validation:</p>
+<ul>
+ <li><strong>name</strong> = <code>message.name</code></li>
+ <li><strong>code</strong> = <code>message.code</code></li>
+ <li><strong>icad_branch_code</strong> = <code>generated_icad_branch_code</code></li>
+ <li><strong>city</strong> = <code>message.city</code></li>
+ <li><strong>upload_status</strong> = <code>'PENDING'</code></li>
+ <li><strong>upload_attempts</strong> = <code>0</code></li>
+ <li><strong>status</strong> = <code>1</code> (Active)</li>
+ <li><strong>created_on</strong> = <code>CURRENT_TIMESTAMP</code></li>
+ <li><strong>last_modified_on</strong> = <code>CURRENT_TIMESTAMP</code></li>
+</ul>
+<h3 id="step-4-acknowledge-kafka-message"><a href="#step-4-acknowledge-kafka-message" id="step-4-acknowledge-kafka-message">Step 4: Acknowledge Kafka Message</a></h3>
+<p>Once the branch details are persisted in the database, the Kafka message is acknowledged.</p>
+<h2 id="5-asynchronous-processing-upload-to-icad"><a href="#5-asynchronous-processing-upload-to-icad" id="5-asynchronous-processing-upload-to-icad">5. Asynchronous Processing: Upload to ICAD</a></h2>
+<h3 id="request-composition"><a href="#request-composition" id="request-composition">Request Composition</a></h3>
+<p>The ICAD service composes the branch creation request with the following field mappings:</p>
+<ul>
+ <li><strong>requestID</strong> = <code>&lt;generated_request_id&gt;</code></li>
+ <li><strong>branchCode</strong> = <code>record.icad_branch_code</code></li>
+ <li><strong>institutionCode</strong> = <code>&lt;configured_institution_code&gt;</code></li>
+ <li><strong>branchName</strong> = <code>record.name</code> (truncated to 100 characters)</li>
+ <li><strong>branchLocation</strong> = <code>record.city</code> (truncated to 200 characters)</li>
+</ul>
+<h3 id="icad-api-submission"><a href="#icad-api-submission" id="icad-api-submission">ICAD API Submission</a></h3>
+<p>The composed request is sent to the ICAD system for processing, and the response is used to update the corresponding record in the database.</p>
+<h3 id="icad-response-handling"><a href="#icad-response-handling" id="icad-response-handling">ICAD Response Handling</a></h3>
+<p>The service updates the database based on the ICAD response:</p>
+<ul>
+ <li><strong>icad_request_id</strong> = <code>&lt;generated_request_id&gt;</code></li>
+ <li><strong>icad_response_code</strong> = the response code received from ICAD.</li>
+ <li><strong>icad_response_dump</strong> = the stringified ICAD response.</li>
+ <li><strong>upload_attempts</strong> = incremented by 1.</li>
+</ul>
+<h2 id="6-upload-statuses"><a href="#6-upload-statuses" id="6-upload-statuses">6. Upload Statuses</a></h2>
+<p>The ICAD service updates the <code>upload_status</code> field according to the response received from ICAD:</p>
+<h2 id="icad-response-code-mappings"><a href="#icad-response-code-mappings" id="icad-response-code-mappings">ICAD Response Code Mappings</a></h2>
+<p>The service updates the <code>upload_status</code> field based on the response received from ICAD. Below are the ICAD response codes, their descriptions, and how the system updates the <code>upload_status</code>:</p>
+<table>
+ <thead>
+  <tr>
+   <th>ICAD Response Code</th>
+   <th>Description</th>
+   <th>Upload Status</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>00</td>
+   <td>The function call was successful</td>
+   <td>UPLOADED</td>
+  </tr>
+  <tr>
+   <td>02</td>
+   <td>Partial Success</td>
+   <td>ERROR</td>
+  </tr>
+  <tr>
+   <td>44</td>
+   <td>Invalid Branch Code</td>
+   <td>FAILED</td>
+  </tr>
+  <tr>
+   <td>45</td>
+   <td>Invalid Branch Name</td>
+   <td>FAILED</td>
+  </tr>
+  <tr>
+   <td>46</td>
+   <td>Invalid Branch Location</td>
+   <td>FAILED</td>
+  </tr>
+  <tr>
+   <td>54</td>
+   <td>Invalid Request Id</td>
+   <td>FAILED</td>
+  </tr>
+  <tr>
+   <td>55</td>
+   <td>Invalid Unique Customer Id</td>
+   <td>FAILED</td>
+  </tr>
+  <tr>
+   <td>56</td>
+   <td>Invalid Institution Code</td>
+   <td>FAILED</td>
+  </tr>
+  <tr>
+   <td>59</td>
+   <td>Invalid Account Number</td>
+   <td>FAILED</td>
+  </tr>
+  <tr>
+   <td>60</td>
+   <td>Invalid Account Name</td>
+   <td>FAILED</td>
+  </tr>
+  <tr>
+   <td>63</td>
+   <td>Security Violation</td>
+   <td>FAILED</td>
+  </tr>
+  <tr>
+   <td>64</td>
+   <td>Invalid Account Designation</td>
+   <td>FAILED</td>
+  </tr>
+  <tr>
+   <td>65</td>
+   <td>Invalid Account Status</td>
+   <td>FAILED</td>
+  </tr>
+  <tr>
+   <td>66</td>
+   <td>Invalid Account Type</td>
+   <td>FAILED</td>
+  </tr>
+  <tr>
+   <td>67</td>
+   <td>Invalid BVN</td>
+   <td>FAILED</td>
+  </tr>
+  <tr>
+   <td>68</td>
+   <td>Invalid Currency</td>
+   <td>FAILED</td>
+  </tr>
+  <tr>
+   <td>69</td>
+   <td>Invalid RC Number</td>
+   <td>FAILED</td>
+  </tr>
+  <tr>
+   <td>86</td>
+   <td>JSON Generation Exception</td>
+   <td>ERROR</td>
+  </tr>
+  <tr>
+   <td>87</td>
+   <td>JSON Mapping Exception</td>
+   <td>ERROR</td>
+  </tr>
+  <tr>
+   <td>88</td>
+   <td>IO Exception</td>
+   <td>ERROR</td>
+  </tr>
+  <tr>
+   <td>89</td>
+   <td>Exception</td>
+   <td>ERROR</td>
+  </tr>
+  <tr>
+   <td>96</td>
+   <td>System Malfunction</td>
+   <td>INCONCLUSIVE</td>
+  </tr>
+  <tr>
+   <td>99</td>
+   <td>Request Failed</td>
+   <td>FAILED</td>
+  </tr>
+  <tr>
+   <td>100</td>
+   <td>Invalid Old Account Number</td>
+   <td>FAILED</td>
+  </tr>
+  <tr>
+   <td>101</td>
+   <td>Invalid Phone Number</td>
+   <td>FAILED</td>
+  </tr>
+  <tr>
+   <td>102</td>
+   <td>Invalid TIN</td>
+   <td>FAILED</td>
+  </tr>
+  <tr>
+   <td>103</td>
+   <td>Invalid PEP</td>
+   <td>FAILED</td>
+  </tr>
+  <tr>
+   <td>104</td>
+   <td>Invalid Sector Code</td>
+   <td>FAILED</td>
+  </tr>
+  <tr>
+   <td>105</td>
+   <td>Savings or current accounts must be in local currency</td>
+   <td>FAILED</td>
+  </tr>
+ </tbody>
+</table>
+<p>These mappings ensure that the service responds correctly to ICAD responses, updating the internal <code>upload_status</code> field accordingly.</p>
+<h2 id="7-recurring-jobs"><a href="#7-recurring-jobs" id="7-recurring-jobs">7. Recurring Jobs</a></h2>
+<h3 id="retry-job-for-inconclusive-uploads"><a href="#retry-job-for-inconclusive-uploads" id="retry-job-for-inconclusive-uploads">Retry Job for Inconclusive Uploads</a></h3>
+<p>A scheduled job retries branches and account with an inclonclusive state. The job uses a configurable <code>cutoff_time</code> to exclude records modified within the last few minutes from retry processing.</p>
+<h3 id="reprocess-pending-branches"><a href="#reprocess-pending-branches" id="reprocess-pending-branches">Reprocess Pending Branches</a></h3>
+<p>Another recurring job picks up branches with a <code>PENDING</code> upload status and retries them for processing. Both jobs use the <strong>ICAD_BRANCH_UPLOAD_PROCESSOR</strong> type to handle these operations.</p></div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="../../../../../admonition.js"></script>
+    <script type="text/javascript" src="../../../../../reformat-mermaid.js"></script>
+    <script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.3.0/dist/mermaid.esm.min.mjs';</script>
+    <script type="text/javascript" src="../../../../../katex-render.js"></script>
+  </body>
+</html>

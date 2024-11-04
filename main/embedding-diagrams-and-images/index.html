@@ -1,0 +1,721 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Embedding diagrams and images | Moniepoint Core System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css" rel="stylesheet">
+    <link href="../../style.css" rel="stylesheet">
+    <link href="./../style-branding.css" rel="stylesheet">
+    <script type="text/javascript" src="../../modal.js"></script>
+    <script type="text/javascript" src="../../svg-modal.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.2/dist/svg-pan-zoom.min.js"></script>
+    <link href="../../admonition.css" rel="stylesheet">
+
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+        
+            <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+        
+            <script>
+            window.WebFontConfig = {
+                custom: {
+                families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+                    'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+                    'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+                    'KaTeX_Size4', 'KaTeX_Typewriter'],
+                },
+            };
+            </script>
+            <script defer src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js" crossorigin="anonymous"></script>
+            <link href="../site/favicon.ico" rel="icon" type="image/ico">
+    <link href="../site/custom.css" rel="stylesheet">
+  </head>
+  <body>
+    <script type="text/javascript" src="../../header.js"></script>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand has-site-branding"><a href="../" class="navbar-item"><img alt="Moniepoint Core System" src="../site/logo.png"></a><a href="../" class="navbar-item"><span class="has-text-weight-semibold has-site-branding">Moniepoint Core System</span></a></div>
+      <div class="navbar-menu has-site-branding">
+        <div class="navbar-end">
+          <div class="navbar-item"><input class="input is-small is-rounded" id="search" type="search" size="30" maxlength="50" placeholder="Search..." onkeyup="redirect(event, value, '../search/')"></div>
+          <div class="navbar-item has-dropdown is-hoverable"><a class="navbar-link has-site-branding">main</a>
+            <div class="navbar-dropdown is-right"><a href="../../main/" class="navbar-item">main</a>
+              <hr class="navbar-divider">
+              <div class="navbar-item has-text-grey-light"><span>v</span><span>0.0.0</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="site-layout" id="site">
+      <aside class="menu p-3">
+        <p class="menu-label">General</p>
+        <ul class="menu-list has-site-branding">
+          <li><a href="../" class="">Home</a><a href="../decisions/" class="">Decisions</a><a href="../software-systems/" class="">Software Systems</a><a href="./" class="is-active">Embedding diagrams and images</a></li>
+        </ul>
+        <p class="menu-label">Software systems</p>
+        <ul class="menu-list has-site-branding">
+          <li><a href="../card-services/" class="">Card Services</a><a href="../core-banking-system/" class="">Core Banking System</a><a href="../customer-onboarding/" class="">Customer Onboarding</a><a href="../moniepoint-fx/" class="">Moniepoint FX</a><a href="../value-added-services-(vas)/" class="">Value Added Services (VAS)</a></li>
+        </ul>
+      </aside>
+      <div class="container is-fluid">
+        <div class="content p-3">
+          <div><h2 id="embedding-diagrams-and-images"><a href="#embedding-diagrams-and-images" id="embedding-diagrams-and-images">Embedding diagrams and images</a></h2>
+<p>This page showcases the ability to embed diagrams and static images in documentation.</p>
+<h3 id="embedding-diagrams"><a href="#embedding-diagrams" id="embedding-diagrams">Embedding diagrams</a></h3>
+<p>Diagrams can be embedded using the <code>embed:</code> syntax:</p>
+<pre><code class="language-markdown">![System Landscape Diagram](embed:SystemLandscape)
+</code></pre>
+<p>See also: <a href="https://www.structurizr.com/help/documentation/diagrams">https://www.structurizr.com/help/documentation/diagrams</a></p>
+<h4 id="example-embedded-diagram"><a href="#example-embedded-diagram" id="example-embedded-diagram">Example: Embedded diagram</a></h4>
+<p>
+ <div>
+  <figure style="width: min(100%, 1175px);">
+   <div>
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" preserveAspectRatio="meet" version="1.1" viewBox="0 0 1175 1037" zoomAndPan="magnify">
+     <title>
+      System Landscape
+     </title><defs /><g>
+      <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="132.0635" x="514.4683" y="23.5352">System Landscape</text><!--cluster group_1-->
+      <g id="cluster_group_1">
+       <rect fill="none" height="414.9" rx="2.5" ry="2.5" style="stroke:#CCCCCC;stroke-width:1.0;stroke-dasharray:7.0,7.0;" width="1162" x="7" y="242.7983" />
+       <text fill="#CCCCCC" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="92.8438" x="541.5781" y="260.267">Moniepoint</text>
+      </g><!--entity MoniepointFX-->
+      <g id="elem_MoniepointFX">
+       <a href="../moniepoint-fx/context/" target="_self" title="../moniepoint-fx/context/" xlink:actuate="onRequest" xlink:href="../moniepoint-fx/context/" xlink:show="new" xlink:title="../moniepoint-fx/context/" xlink:type="simple">
+        <rect fill="#686868" height="108.7969" rx="2.5" ry="2.5" style="stroke:#484848;stroke-width:0.5;" width="231.2168" x="23.39" y="297.4683" />
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="92.8438" x="80.0101" y="322.937">Moniepoint</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="5.2734" x="172.8539" y="322.937">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="19.8594" x="178.1273" y="322.937">FX</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="136.7836" y="339.8472">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="44.2764" x="53.1903" y="356.3355">Allows</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="97.4667" y="356.3355">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="63.4307" x="101.8963" y="356.3355">customer</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="165.327" y="356.3355">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="13.8359" x="169.7567" y="356.3355">to</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="183.5926" y="356.3355">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="36.7842" x="188.0223" y="356.3355">make</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="86.2695" x="63.4818" y="372.8238">international</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="149.7513" y="372.8238">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="60.334" x="154.181" y="372.8238">transfers</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="131.4688" x="37.8197" y="391.312">Development Team</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="61.6602" x="178.3324" y="391.312">FX Team</text>
+        <line style="stroke:#FFFFFF;stroke-width:0.5;" x1="33.39" x2="244.6068" y1="377.7769" y2="377.7769" />
+        <line style="stroke:#FFFFFF;stroke-width:0.5;" x1="33.39" x2="244.6068" y1="394.2652" y2="394.2652" />
+        <line style="stroke:#FFFFFF;stroke-width:0.5;" x1="33.39" x2="33.39" y1="377.7769" y2="394.2652" />
+        <line style="stroke:#FFFFFF;stroke-width:0.5;" x1="173.7181" x2="173.7181" y1="377.7769" y2="394.2652" />
+        <line style="stroke:#FFFFFF;stroke-width:0.5;" x1="244.6068" x2="244.6068" y1="377.7769" y2="394.2652" />
+       </a>
+      </g><!--entity CustomerOnboarding-->
+      <g id="elem_CustomerOnboarding">
+       <a href="../customer-onboarding/context/" target="_self" title="../customer-onboarding/context/" xlink:actuate="onRequest" xlink:href="../customer-onboarding/context/" xlink:show="new" xlink:title="../customer-onboarding/context/" xlink:type="simple">
+        <rect fill="#686868" height="108.7969" rx="2.5" ry="2.5" style="stroke:#484848;stroke-width:0.5;" width="299.6309" x="289.18" y="297.4683" />
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="79.8203" x="347.4251" y="322.937">Customer</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="5.2734" x="427.2454" y="322.937">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="98.0469" x="432.5189" y="322.937">Onboarding</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="436.7806" y="339.8472">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="59.876" x="375.1273" y="356.3355">Manages</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="435.0032" y="356.3355">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="63.4307" x="439.4329" y="356.3355">customer</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="78.4355" x="371.3709" y="372.8238">onboarding</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="449.8065" y="372.8238">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="52.3838" x="454.2362" y="372.8238">process</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="131.4688" x="303.6097" y="391.312">Development Team</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="130.0742" x="444.1224" y="391.312">Onboarding Team</text>
+        <line style="stroke:#FFFFFF;stroke-width:0.5;" x1="299.18" x2="578.8109" y1="377.7769" y2="377.7769" />
+        <line style="stroke:#FFFFFF;stroke-width:0.5;" x1="299.18" x2="578.8109" y1="394.2652" y2="394.2652" />
+        <line style="stroke:#FFFFFF;stroke-width:0.5;" x1="299.18" x2="299.18" y1="377.7769" y2="394.2652" />
+        <line style="stroke:#FFFFFF;stroke-width:0.5;" x1="439.5081" x2="439.5081" y1="377.7769" y2="394.2652" />
+        <line style="stroke:#FFFFFF;stroke-width:0.5;" x1="578.8109" x2="578.8109" y1="377.7769" y2="394.2652" />
+       </a>
+      </g><!--entity ValueAddedServicesVAS-->
+      <g id="elem_ValueAddedServicesVAS">
+       <a href="../value-added-services-(vas)/context/" target="_self" title="../value-added-services-(vas)/context/" xlink:actuate="onRequest" xlink:href="../value-added-services-(vas)/context/" xlink:show="new" xlink:title="../value-added-services-(vas)/context/" xlink:type="simple">
+        <rect fill="#1168BD" height="144.1289" rx="2.5" ry="2.5" style="stroke:#0B4884;stroke-width:0.5;" width="247.3223" x="623.34" y="279.7983" />
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="45.6719" x="658.7004" y="305.267">Value</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="5.2734" x="704.3722" y="305.267">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="52.9609" x="709.6457" y="305.267">Added</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="5.2734" x="762.6066" y="305.267">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="67.4219" x="767.88" y="305.267">Services</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="43.9609" x="725.0207" y="324.1108">(VAS)</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="744.7863" y="341.0209">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="44.2764" x="648.7072" y="357.5092">Allows</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="692.9836" y="357.5092">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="63.4307" x="697.4132" y="357.5092">customer</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="760.8439" y="357.5092">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="13.8359" x="765.2736" y="357.5092">to</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="779.1095" y="357.5092">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="61.7559" x="783.5392" y="357.5092">purchase</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="52.0898" x="658.5202" y="373.9975">airtime,</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="710.61" y="373.9975">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="20.9521" x="715.0397" y="373.9975">bill</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="735.9919" y="373.9975">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="63.082" x="740.4215" y="373.9975">payment,</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="803.5036" y="373.9975">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="27.5488" x="807.9333" y="373.9975">BVN</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="41.5283" x="683.6081" y="390.4858">Check</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="725.1364" y="390.4858">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="47.332" x="729.5661" y="390.4858">Service</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="776.8981" y="390.4858">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="29.0664" x="781.3278" y="390.4858">e.t.c</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="131.4688" x="637.7697" y="408.9741">Development Team</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="77.7656" x="778.2824" y="408.9741">Core Team</text>
+        <line style="stroke:#FFFFFF;stroke-width:0.5;" x1="633.34" x2="860.6623" y1="395.4389" y2="395.4389" />
+        <line style="stroke:#FFFFFF;stroke-width:0.5;" x1="633.34" x2="860.6623" y1="411.9272" y2="411.9272" />
+        <line style="stroke:#FFFFFF;stroke-width:0.5;" x1="633.34" x2="633.34" y1="395.4389" y2="411.9272" />
+        <line style="stroke:#FFFFFF;stroke-width:0.5;" x1="773.6681" x2="773.6681" y1="395.4389" y2="411.9272" />
+        <line style="stroke:#FFFFFF;stroke-width:0.5;" x1="860.6623" x2="860.6623" y1="395.4389" y2="411.9272" />
+       </a>
+      </g><!--entity CardServices-->
+      <g id="elem_CardServices">
+       <a href="../card-services/context/" target="_self" title="../card-services/context/" xlink:actuate="onRequest" xlink:href="../card-services/context/" xlink:show="new" xlink:title="../card-services/context/" xlink:type="simple">
+        <rect fill="#1168BD" height="125.2852" rx="2.5" ry="2.5" style="stroke:#0B4884;stroke-width:0.5;" width="247.3223" x="905.34" y="289.2183" />
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="38.6797" x="973.3136" y="314.687">Card</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="5.2734" x="1011.9933" y="314.687">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="67.4219" x="1017.2668" y="314.687">Services</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="1026.7863" y="331.5972">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="59.876" x="945.6813" y="348.0855">Manages</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="1005.5573" y="348.0855">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="65.9463" x="1009.987" y="348.0855">Customer</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="1075.9333" y="348.0855">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="31.958" x="1080.3629" y="348.0855">Card</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="67.5186" x="936.487" y="364.5738">Operation</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="1004.0055" y="364.5738">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="55.7471" x="1008.4352" y="364.5738">inluding</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="1064.1823" y="364.5738">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="52.9033" x="1068.612" y="364.5738">issuing,</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="62.7129" x="980.8966" y="381.062">spending</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="1043.6095" y="381.062">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="29.0664" x="1048.0392" y="381.062">e.t.c</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="131.4688" x="919.7697" y="399.5503">Development Team</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="77.7656" x="1060.2824" y="399.5503">Core Team</text>
+        <line style="stroke:#FFFFFF;stroke-width:0.5;" x1="915.34" x2="1142.6623" y1="386.0152" y2="386.0152" />
+        <line style="stroke:#FFFFFF;stroke-width:0.5;" x1="915.34" x2="1142.6623" y1="402.5034" y2="402.5034" />
+        <line style="stroke:#FFFFFF;stroke-width:0.5;" x1="915.34" x2="915.34" y1="386.0152" y2="402.5034" />
+        <line style="stroke:#FFFFFF;stroke-width:0.5;" x1="1055.6681" x2="1055.6681" y1="386.0152" y2="402.5034" />
+        <line style="stroke:#FFFFFF;stroke-width:0.5;" x1="1142.6623" x2="1142.6623" y1="386.0152" y2="402.5034" />
+       </a>
+      </g><!--entity CoreBankingSystem-->
+      <g id="elem_CoreBankingSystem">
+       <a href="../core-banking-system/context/" target="_self" title="../core-banking-system/context/" xlink:actuate="onRequest" xlink:href="../core-banking-system/context/" xlink:show="new" xlink:title="../core-banking-system/context/" xlink:type="simple">
+        <rect fill="#1168BD" height="141.7734" rx="2.5" ry="2.5" style="stroke:#0B4884;stroke-width:0.5;" width="247.3223" x="468.34" y="499.9283" />
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="38.2656" x="504.9582" y="525.397">Core</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="5.2734" x="543.2238" y="525.397">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="66.3828" x="548.4972" y="525.397">Banking</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="5.2734" x="614.88" y="525.397">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="58.8906" x="620.1535" y="525.397">System</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="589.7863" y="542.3072">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="53.7441" x="517.7321" y="558.7955">Kuwego</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="571.4762" y="558.7955">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="31.8145" x="575.9059" y="558.7955">Core</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="607.7204" y="558.7955">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="54.1201" x="612.1501" y="558.7955">Banking</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48.0977" x="521.6525" y="575.2838">System</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="569.7502" y="575.2838">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="11.1836" x="574.1798" y="575.2838">is</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="585.3634" y="575.2838">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="21.7246" x="589.7931" y="575.2838">the</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="611.5177" y="575.2838">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="46.4023" x="615.9474" y="575.2838">central</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="74.2383" x="500.6559" y="591.772">foundation</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="574.8942" y="591.772">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="13.7471" x="579.3239" y="591.772">of</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="593.071" y="591.772">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="85.8457" x="597.5006" y="591.772">MoniePoint's</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="54.8789" x="526.1574" y="608.2603">banking</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="581.0363" y="608.2603">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="72.3789" x="585.466" y="608.2603">operations</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="131.4688" x="482.7697" y="626.7486">Development Team</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="77.7656" x="623.2824" y="626.7486">Core Team</text>
+        <line style="stroke:#FFFFFF;stroke-width:0.5;" x1="478.34" x2="705.6623" y1="613.2134" y2="613.2134" />
+        <line style="stroke:#FFFFFF;stroke-width:0.5;" x1="478.34" x2="705.6623" y1="629.7017" y2="629.7017" />
+        <line style="stroke:#FFFFFF;stroke-width:0.5;" x1="478.34" x2="478.34" y1="613.2134" y2="629.7017" />
+        <line style="stroke:#FFFFFF;stroke-width:0.5;" x1="618.6681" x2="618.6681" y1="613.2134" y2="629.7017" />
+        <line style="stroke:#FFFFFF;stroke-width:0.5;" x1="705.6623" x2="705.6623" y1="613.2134" y2="629.7017" />
+       </a>
+      </g><!--entity Customer-->
+      <g id="elem_Customer">
+       <rect fill="#DDDDDD" height="136.3086" rx="2.5" ry="2.5" style="stroke:#9A9A9A;stroke-width:0.5;" width="206.0674" x="35.97" y="44.4883" />
+       <image height="48" width="48" x="115.0037" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAACDklEQVR4Xu2YgWrCMBCGfbg93B5uryAigogIIiKICB3fICD3r+kludkG9sMH43dtcsn1cu1qvV6vekaM3hCjlf1+P1wul+F2uw33+/2H6/U6nE6nYbvdftr/b0WMWo7H4/B8PocpEdhut/uy19ciRimbzeaDVS4VO2LvVYMYJTB5z6qP6Xw+NwchRgk1K29F6tn7liCGF1IgSuykvb8XMTwwoJ1Ei6hadgwvYnhg26Nlx/AihgdKYbQ4P+w4HsTw0FJ5xlRbVsXwYAePUG1JFcODHTxCbw3g8XjY8ZtVex6I4YHmLFpvfYijyyhFwY7hRQwvkZWoNv9BDC9dtxKJiAPtcDhUrz6IUQIr11KRag+vV8SooWYnWlc+IUYtTMizG5Tglpy3iNEK77ukBhNlZ4B2mdIbOfGEGL0hRm+I4YHvO+Q8qcIhBCWfSrg2XUdq0UbUppcYOZhw7kHlt5TvTIqggL+5dqpa8XtpTyTGb3DTyNZhSgTi3RExLJEtQ4nYTc+nSDFeie46S8WuT+2EGAly195wDpFOdm6uAKYeuHcq13aIAUtZ/SSeBzvHbACUwqVp7IEWA3K1fi6NvfSLAfbiJWjstVOM6A+3UaK7tXPtKoCxcirGfwB/pO4DcD8D8M7O06uxLxhiwNxNnFWuqRMjQd1dgjhUc297YrxC1LzM0EzNQW7irgB6QIze+AYz2wyl7PNxjQAAAABJRU5ErkJggg==" y="54.4883" />
+       <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="79.8203" x="99.0935" y="117.957">Customer</text>
+       <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="136.7888" y="134.8672">&nbsp;</text>
+       <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="9.6592" x="46.1956" y="151.3555">A</text>
+       <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="55.8548" y="151.3555">&nbsp;</text>
+       <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="44.3584" x="60.2845" y="151.3555">typical</text>
+       <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="104.6429" y="151.3555">&nbsp;</text>
+       <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="54.8789" x="109.0725" y="151.3555">banking</text>
+       <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="163.9514" y="151.3555">&nbsp;</text>
+       <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="63.4307" x="168.3811" y="151.3555">customer</text>
+       <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="26.8926" x="45.97" y="167.8438">that</text>
+       <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="72.8626" y="167.8438">&nbsp;</text>
+       <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="40.5508" x="77.2923" y="167.8438">banks</text>
+       <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="117.843" y="167.8438">&nbsp;</text>
+       <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28.7588" x="122.2727" y="167.8438">with</text>
+       <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="151.0315" y="167.8438">&nbsp;</text>
+       <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="76.5762" x="155.4612" y="167.8438">Moniepoint</text>
+      </g><!--entity NIBSSICAD-->
+      <g id="elem_NIBSSICAD">
+       <rect fill="#686868" height="121.2852" rx="2.5" ry="2.5" style="stroke:#484848;stroke-width:0.5;" width="206.8809" x="488.56" y="733.6983" />
+       <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="45.9609" x="545.7973" y="759.167">NIBSS</text>
+       <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="5.2734" x="591.7582" y="759.167">&nbsp;</text>
+       <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="41.1719" x="597.0317" y="759.167">ICAD</text>
+       <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="589.7856" y="776.0772">&nbsp;</text>
+       <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="38.0215" x="530.4462" y="792.5655">NIBBS</text>
+       <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="568.4677" y="792.5655">&nbsp;</text>
+       <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="54.5029" x="572.8974" y="792.5655">Handles</text>
+       <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="627.4003" y="792.5655">&nbsp;</text>
+       <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="21.7246" x="631.83" y="792.5655">the</text>
+       <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="92.7568" x="498.56" y="809.0538">infrastructure</text>
+       <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="591.3168" y="809.0538">&nbsp;</text>
+       <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="19.4756" x="595.7465" y="809.0538">for</text>
+       <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="615.2221" y="809.0538">&nbsp;</text>
+       <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="65.7891" x="619.6518" y="809.0538">payments</text>
+       <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56.9229" x="501.0483" y="825.542">between</text>
+       <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="557.9711" y="825.542">&nbsp;</text>
+       <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="58.4063" x="562.4008" y="825.542">different</text>
+       <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="620.8071" y="825.542">&nbsp;</text>
+       <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="40.5508" x="625.2368" y="825.542">banks</text>
+       <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="665.7875" y="825.542">&nbsp;</text>
+       <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="12.7354" x="670.2172" y="825.542">in</text>
+       <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="52.8555" x="565.5727" y="842.0303">Nigeria.</text>
+      </g><!--link CoreBankingSystem to NIBSSICAD-->
+      <g id="link_CoreBankingSystem_NIBSSICAD">
+       <path d="M592,641.9083 C592,671.3183 592,697.1683 592,725.3983 " fill="none" id="CoreBankingSystem-to-NIBSSICAD" style="stroke:#707070;stroke-width:1.0;" />
+       <polygon fill="#707070" points="592,733.3983,595,725.3983,589,725.3983,592,733.3983" style="stroke:#707070;stroke-width:1.0;" />
+       <text fill="#707070" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="29.9063" x="593" y="686.2998">Push</text>
+       <text fill="#707070" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="3.9551" x="622.9063" y="686.2998">&nbsp;</text>
+       <text fill="#707070" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="42.2168" x="626.8613" y="686.2998">Branch</text>
+       <text fill="#707070" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="3.9551" x="669.0781" y="686.2998">&nbsp;</text>
+       <text fill="#707070" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="22.8867" x="673.0332" y="686.2998">and</text>
+       <text fill="#707070" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="49.8984" x="611.2695" y="700.4327">Account</text>
+       <text fill="#707070" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="3.9551" x="661.168" y="700.4327">&nbsp;</text>
+       <text fill="#707070" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="12.5273" x="665.123" y="700.4327">to</text>
+      </g><!--link ValueAddedServicesVAS to CoreBankingSystem-->
+      <g id="link_ValueAddedServicesVAS_CoreBankingSystem">
+       <path d="M696.03,424.2083 C678.74,448.4083 664.0889,468.9077 646.8589,493.0377 " fill="none" id="ValueAddedServicesVAS-to-CoreBankingSystem" style="stroke:#707070;stroke-width:1.0;" />
+       <polygon fill="#707070" points="642.21,499.5483,649.3004,494.781,644.4174,491.2944,642.21,499.5483" style="stroke:#707070;stroke-width:1.0;" />
+       <text fill="#707070" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="33.2637" x="675" y="466.5298">Debit</text>
+       <text fill="#707070" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="3.9551" x="708.2637" y="466.5298">&nbsp;</text>
+       <text fill="#707070" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="22.8867" x="712.2188" y="466.5298">and</text>
+       <text fill="#707070" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="3.9551" x="735.1055" y="466.5298">&nbsp;</text>
+       <text fill="#707070" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="57.4512" x="739.0605" y="466.5298">Crediting</text>
+      </g><!--link CardServices to CoreBankingSystem-->
+      <g id="link_CardServices_CoreBankingSystem">
+       <path d="M912.65,414.8783 C878.15,432.9383 840.19,452.4983 805,469.9283 C776.36,484.1183 752.5684,495.5617 723.2884,509.3417 " fill="none" id="CardServices-to-CoreBankingSystem" style="stroke:#707070;stroke-width:1.0;" />
+       <polygon fill="#707070" points="716.05,512.7483,724.5659,512.0561,722.011,506.6273,716.05,512.7483" style="stroke:#707070;stroke-width:1.0;" />
+       <text fill="#707070" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="47.4668" x="836" y="466.5298">Process</text>
+       <text fill="#707070" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="3.9551" x="883.4668" y="466.5298">&nbsp;</text>
+       <text fill="#707070" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="73.207" x="887.4219" y="466.5298">Transaction</text>
+      </g><!--link MoniepointFX to CoreBankingSystem-->
+      <g id="link_MoniepointFX_CoreBankingSystem">
+       <path d="M238.14,406.7183 C249.51,412.6283 260.97,418.4783 272,423.9283 C336.03,455.5983 401.078,485.5202 460.758,512.2302 " fill="none" id="MoniepointFX-to-CoreBankingSystem" style="stroke:#707070;stroke-width:1.0;" />
+       <polygon fill="#707070" points="468.06,515.4983,461.9835,509.492,459.5324,514.9685,468.06,515.4983" style="stroke:#707070;stroke-width:1.0;" />
+       <text fill="#707070" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="47.4668" x="368" y="466.5298">Process</text>
+       <text fill="#707070" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="3.9551" x="415.4668" y="466.5298">&nbsp;</text>
+       <text fill="#707070" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="73.207" x="419.4219" y="466.5298">Transaction</text>
+      </g><!--link CustomerOnboarding to CoreBankingSystem-->
+      <g id="link_CustomerOnboarding_CoreBankingSystem">
+       <path d="M476.82,406.4983 C496.64,434.5983 516.5607,462.8396 537.8707,493.0696 " fill="none" id="CustomerOnboarding-to-CoreBankingSystem" style="stroke:#707070;stroke-width:1.0;" />
+       <polygon fill="#707070" points="542.48,499.6083,540.3227,491.3411,535.4187,494.7981,542.48,499.6083" style="stroke:#707070;stroke-width:1.0;" />
+       <text fill="#707070" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="39.9844" x="521" y="466.5298">Create</text>
+       <text fill="#707070" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="3.9551" x="560.9844" y="466.5298">&nbsp;</text>
+       <text fill="#707070" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="49.8984" x="564.9395" y="466.5298">Account</text>
+      </g><!--link Customer to MoniepointFX-->
+      <g id="link_Customer_MoniepointFX">
+       <path d="M139,180.9883 C139,217.8383 139,254.8583 139,289.2883 " fill="none" id="Customer-to-MoniepointFX" style="stroke:#707070;stroke-width:1.0;" />
+       <polygon fill="#707070" points="139,297.2883,142,289.2883,136,289.2883,139,297.2883" style="stroke:#707070;stroke-width:1.0;" />
+       <text fill="#707070" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="29.4375" x="140" y="223.3998">Uses</text>
+      </g>
+      <rect fill="none" height="16.4883" style="stroke:none;stroke-width:1.0;" width="294.5264" x="849.4736" y="878.9834" />
+      <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="52.2539" x="849.4736" y="892.5186">Legend</text>
+      <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="901.7275" y="892.5186">&nbsp;</text>
+      <rect fill="none" height="16.4883" style="stroke:none;stroke-width:1.0;" width="294.5264" x="849.4736" y="895.4717" />
+      <text fill="#444444" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8.4287" x="853.9033" y="909.0069">▯</text>
+      <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="862.332" y="909.0069">&nbsp;</text>
+      <text fill="#444444" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="64.374" x="871.1914" y="909.0069">boundary</text>
+      <text fill="#444444" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="41.4893" x="939.9951" y="909.8506">(dashed)</text>
+      <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="981.4844" y="909.0069">&nbsp;</text>
+      <rect fill="#686868" height="16.4883" style="stroke:none;stroke-width:1.0;" width="294.5264" x="849.4736" y="911.96" />
+      <text fill="#484848" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8.4287" x="853.9033" y="925.4952">▯</text>
+      <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="862.332" y="925.4952">&nbsp;</text>
+      <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="223.46" x="871.1914" y="925.4952">Software System,External System</text>
+      <text fill="#FFFFFF" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="29.8193" x="1099.0811" y="926.3389">(solid)</text>
+      <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="1128.9004" y="925.4952">&nbsp;</text>
+      <rect fill="#1168BD" height="16.4883" style="stroke:none;stroke-width:1.0;" width="294.5264" x="849.4736" y="928.4483" />
+      <text fill="#0B4884" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8.4287" x="853.9033" y="941.9834">▯</text>
+      <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="862.332" y="941.9834">&nbsp;</text>
+      <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="111.0977" x="871.1914" y="941.9834">Software System</text>
+      <text fill="#FFFFFF" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="29.8193" x="986.7188" y="942.8272">(solid)</text>
+      <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="1016.5381" y="941.9834">&nbsp;</text>
+      <rect fill="#686868" height="16.4883" style="stroke:none;stroke-width:1.0;" width="294.5264" x="849.4736" y="944.9366" />
+      <text fill="#484848" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8.4287" x="853.9033" y="958.4717">▯</text>
+      <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="862.332" y="958.4717">&nbsp;</text>
+      <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="222.1133" x="871.1914" y="958.4717">Software System,Existing System</text>
+      <text fill="#FFFFFF" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="29.8193" x="1097.7344" y="959.3155">(solid)</text>
+      <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="1127.5537" y="958.4717">&nbsp;</text>
+      <rect fill="#DDDDDD" height="16.4883" style="stroke:none;stroke-width:1.0;" width="294.5264" x="849.4736" y="961.4248" />
+      <text fill="#9A9A9A" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8.4287" x="853.9033" y="974.96">▯</text>
+      <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="862.332" y="974.96">&nbsp;</text>
+      <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="45.6914" x="871.1914" y="974.96">Person</text>
+      <text fill="#FFFFFF" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="29.8193" x="921.3125" y="975.8038">(solid)</text>
+      <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="951.1318" y="974.96">&nbsp;</text>
+      <text fill="#707070" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="14" x="853.9033" y="991.4483">─</text>
+      <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="867.9033" y="991.4483">&nbsp;</text>
+      <text fill="#707070" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="83.6855" x="876.7627" y="991.4483">Relationship</text>
+      <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="964.8779" y="991.4483">&nbsp;</text>
+      <rect fill="#66622E" height="16.4883" style="stroke:none;stroke-width:1.0;" width="294.5264" x="849.4736" y="994.4014" />
+      <text fill="#CCCCCC" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8.4287" x="853.9033" y="1007.9366">▯</text>
+      <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="862.332" y="1007.9366">&nbsp;</text>
+      <text fill="#CCCCCC" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="145.3799" x="871.1914" y="1007.9366">Moniepoint boundary</text>
+      <text fill="#CCCCCC" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="118.5693" x="1021.001" y="1008.7803">(last back color, dashed)</text>
+      <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="1139.5703" y="1007.9366">&nbsp;</text>
+      <line style="stroke:none;stroke-width:1.0;" x1="849.4736" x2="1144" y1="878.9834" y2="878.9834" />
+      <line style="stroke:none;stroke-width:1.0;" x1="849.4736" x2="1144" y1="895.4717" y2="895.4717" />
+      <line style="stroke:none;stroke-width:1.0;" x1="849.4736" x2="1144" y1="911.96" y2="911.96" />
+      <line style="stroke:none;stroke-width:1.0;" x1="849.4736" x2="1144" y1="928.4483" y2="928.4483" />
+      <line style="stroke:none;stroke-width:1.0;" x1="849.4736" x2="1144" y1="944.9366" y2="944.9366" />
+      <line style="stroke:none;stroke-width:1.0;" x1="849.4736" x2="1144" y1="961.4248" y2="961.4248" />
+      <line style="stroke:none;stroke-width:1.0;" x1="849.4736" x2="1144" y1="977.9131" y2="977.9131" />
+      <line style="stroke:none;stroke-width:1.0;" x1="849.4736" x2="1144" y1="994.4014" y2="994.4014" />
+      <line style="stroke:none;stroke-width:1.0;" x1="849.4736" x2="1144" y1="1010.8897" y2="1010.8897" />
+      <line style="stroke:none;stroke-width:1.0;" x1="849.4736" x2="849.4736" y1="878.9834" y2="1010.8897" />
+      <line style="stroke:none;stroke-width:1.0;" x1="1144" x2="1144" y1="878.9834" y2="1010.8897" />
+     </g>
+    </svg>
+   </div>
+   <figcaption>
+    <a onclick="openSvgModal('SystemLandscape-modal', 'SystemLandscape-svg')">System Landscape Diagram</a>
+   </figcaption>
+  </figure>
+  <div class="modal" id="SystemLandscape-modal">
+   <div class="modal-background" onclick="closeModal('SystemLandscape-modal')"></div>
+   <div class="modal-content">
+    <div class="box">
+     <div id="SystemLandscape-svg" class="modal-box-content">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" preserveAspectRatio="meet" version="1.1" viewBox="0 0 1175 1037" zoomAndPan="magnify">
+       <title>
+        System Landscape
+       </title><defs /><g>
+        <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="132.0635" x="514.4683" y="23.5352">System Landscape</text><!--cluster group_1-->
+        <g id="cluster_group_1">
+         <rect fill="none" height="414.9" rx="2.5" ry="2.5" style="stroke:#CCCCCC;stroke-width:1.0;stroke-dasharray:7.0,7.0;" width="1162" x="7" y="242.7983" />
+         <text fill="#CCCCCC" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="92.8438" x="541.5781" y="260.267">Moniepoint</text>
+        </g><!--entity MoniepointFX-->
+        <g id="elem_MoniepointFX">
+         <a href="../moniepoint-fx/context/" target="_self" title="../moniepoint-fx/context/" xlink:actuate="onRequest" xlink:href="../moniepoint-fx/context/" xlink:show="new" xlink:title="../moniepoint-fx/context/" xlink:type="simple">
+          <rect fill="#686868" height="108.7969" rx="2.5" ry="2.5" style="stroke:#484848;stroke-width:0.5;" width="231.2168" x="23.39" y="297.4683" />
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="92.8438" x="80.0101" y="322.937">Moniepoint</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="5.2734" x="172.8539" y="322.937">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="19.8594" x="178.1273" y="322.937">FX</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="136.7836" y="339.8472">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="44.2764" x="53.1903" y="356.3355">Allows</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="97.4667" y="356.3355">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="63.4307" x="101.8963" y="356.3355">customer</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="165.327" y="356.3355">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="13.8359" x="169.7567" y="356.3355">to</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="183.5926" y="356.3355">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="36.7842" x="188.0223" y="356.3355">make</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="86.2695" x="63.4818" y="372.8238">international</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="149.7513" y="372.8238">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="60.334" x="154.181" y="372.8238">transfers</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="131.4688" x="37.8197" y="391.312">Development Team</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="61.6602" x="178.3324" y="391.312">FX Team</text>
+          <line style="stroke:#FFFFFF;stroke-width:0.5;" x1="33.39" x2="244.6068" y1="377.7769" y2="377.7769" />
+          <line style="stroke:#FFFFFF;stroke-width:0.5;" x1="33.39" x2="244.6068" y1="394.2652" y2="394.2652" />
+          <line style="stroke:#FFFFFF;stroke-width:0.5;" x1="33.39" x2="33.39" y1="377.7769" y2="394.2652" />
+          <line style="stroke:#FFFFFF;stroke-width:0.5;" x1="173.7181" x2="173.7181" y1="377.7769" y2="394.2652" />
+          <line style="stroke:#FFFFFF;stroke-width:0.5;" x1="244.6068" x2="244.6068" y1="377.7769" y2="394.2652" />
+         </a>
+        </g><!--entity CustomerOnboarding-->
+        <g id="elem_CustomerOnboarding">
+         <a href="../customer-onboarding/context/" target="_self" title="../customer-onboarding/context/" xlink:actuate="onRequest" xlink:href="../customer-onboarding/context/" xlink:show="new" xlink:title="../customer-onboarding/context/" xlink:type="simple">
+          <rect fill="#686868" height="108.7969" rx="2.5" ry="2.5" style="stroke:#484848;stroke-width:0.5;" width="299.6309" x="289.18" y="297.4683" />
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="79.8203" x="347.4251" y="322.937">Customer</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="5.2734" x="427.2454" y="322.937">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="98.0469" x="432.5189" y="322.937">Onboarding</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="436.7806" y="339.8472">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="59.876" x="375.1273" y="356.3355">Manages</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="435.0032" y="356.3355">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="63.4307" x="439.4329" y="356.3355">customer</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="78.4355" x="371.3709" y="372.8238">onboarding</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="449.8065" y="372.8238">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="52.3838" x="454.2362" y="372.8238">process</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="131.4688" x="303.6097" y="391.312">Development Team</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="130.0742" x="444.1224" y="391.312">Onboarding Team</text>
+          <line style="stroke:#FFFFFF;stroke-width:0.5;" x1="299.18" x2="578.8109" y1="377.7769" y2="377.7769" />
+          <line style="stroke:#FFFFFF;stroke-width:0.5;" x1="299.18" x2="578.8109" y1="394.2652" y2="394.2652" />
+          <line style="stroke:#FFFFFF;stroke-width:0.5;" x1="299.18" x2="299.18" y1="377.7769" y2="394.2652" />
+          <line style="stroke:#FFFFFF;stroke-width:0.5;" x1="439.5081" x2="439.5081" y1="377.7769" y2="394.2652" />
+          <line style="stroke:#FFFFFF;stroke-width:0.5;" x1="578.8109" x2="578.8109" y1="377.7769" y2="394.2652" />
+         </a>
+        </g><!--entity ValueAddedServicesVAS-->
+        <g id="elem_ValueAddedServicesVAS">
+         <a href="../value-added-services-(vas)/context/" target="_self" title="../value-added-services-(vas)/context/" xlink:actuate="onRequest" xlink:href="../value-added-services-(vas)/context/" xlink:show="new" xlink:title="../value-added-services-(vas)/context/" xlink:type="simple">
+          <rect fill="#1168BD" height="144.1289" rx="2.5" ry="2.5" style="stroke:#0B4884;stroke-width:0.5;" width="247.3223" x="623.34" y="279.7983" />
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="45.6719" x="658.7004" y="305.267">Value</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="5.2734" x="704.3722" y="305.267">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="52.9609" x="709.6457" y="305.267">Added</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="5.2734" x="762.6066" y="305.267">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="67.4219" x="767.88" y="305.267">Services</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="43.9609" x="725.0207" y="324.1108">(VAS)</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="744.7863" y="341.0209">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="44.2764" x="648.7072" y="357.5092">Allows</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="692.9836" y="357.5092">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="63.4307" x="697.4132" y="357.5092">customer</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="760.8439" y="357.5092">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="13.8359" x="765.2736" y="357.5092">to</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="779.1095" y="357.5092">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="61.7559" x="783.5392" y="357.5092">purchase</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="52.0898" x="658.5202" y="373.9975">airtime,</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="710.61" y="373.9975">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="20.9521" x="715.0397" y="373.9975">bill</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="735.9919" y="373.9975">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="63.082" x="740.4215" y="373.9975">payment,</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="803.5036" y="373.9975">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="27.5488" x="807.9333" y="373.9975">BVN</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="41.5283" x="683.6081" y="390.4858">Check</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="725.1364" y="390.4858">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="47.332" x="729.5661" y="390.4858">Service</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="776.8981" y="390.4858">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="29.0664" x="781.3278" y="390.4858">e.t.c</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="131.4688" x="637.7697" y="408.9741">Development Team</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="77.7656" x="778.2824" y="408.9741">Core Team</text>
+          <line style="stroke:#FFFFFF;stroke-width:0.5;" x1="633.34" x2="860.6623" y1="395.4389" y2="395.4389" />
+          <line style="stroke:#FFFFFF;stroke-width:0.5;" x1="633.34" x2="860.6623" y1="411.9272" y2="411.9272" />
+          <line style="stroke:#FFFFFF;stroke-width:0.5;" x1="633.34" x2="633.34" y1="395.4389" y2="411.9272" />
+          <line style="stroke:#FFFFFF;stroke-width:0.5;" x1="773.6681" x2="773.6681" y1="395.4389" y2="411.9272" />
+          <line style="stroke:#FFFFFF;stroke-width:0.5;" x1="860.6623" x2="860.6623" y1="395.4389" y2="411.9272" />
+         </a>
+        </g><!--entity CardServices-->
+        <g id="elem_CardServices">
+         <a href="../card-services/context/" target="_self" title="../card-services/context/" xlink:actuate="onRequest" xlink:href="../card-services/context/" xlink:show="new" xlink:title="../card-services/context/" xlink:type="simple">
+          <rect fill="#1168BD" height="125.2852" rx="2.5" ry="2.5" style="stroke:#0B4884;stroke-width:0.5;" width="247.3223" x="905.34" y="289.2183" />
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="38.6797" x="973.3136" y="314.687">Card</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="5.2734" x="1011.9933" y="314.687">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="67.4219" x="1017.2668" y="314.687">Services</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="1026.7863" y="331.5972">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="59.876" x="945.6813" y="348.0855">Manages</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="1005.5573" y="348.0855">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="65.9463" x="1009.987" y="348.0855">Customer</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="1075.9333" y="348.0855">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="31.958" x="1080.3629" y="348.0855">Card</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="67.5186" x="936.487" y="364.5738">Operation</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="1004.0055" y="364.5738">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="55.7471" x="1008.4352" y="364.5738">inluding</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="1064.1823" y="364.5738">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="52.9033" x="1068.612" y="364.5738">issuing,</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="62.7129" x="980.8966" y="381.062">spending</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="1043.6095" y="381.062">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="29.0664" x="1048.0392" y="381.062">e.t.c</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="131.4688" x="919.7697" y="399.5503">Development Team</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="77.7656" x="1060.2824" y="399.5503">Core Team</text>
+          <line style="stroke:#FFFFFF;stroke-width:0.5;" x1="915.34" x2="1142.6623" y1="386.0152" y2="386.0152" />
+          <line style="stroke:#FFFFFF;stroke-width:0.5;" x1="915.34" x2="1142.6623" y1="402.5034" y2="402.5034" />
+          <line style="stroke:#FFFFFF;stroke-width:0.5;" x1="915.34" x2="915.34" y1="386.0152" y2="402.5034" />
+          <line style="stroke:#FFFFFF;stroke-width:0.5;" x1="1055.6681" x2="1055.6681" y1="386.0152" y2="402.5034" />
+          <line style="stroke:#FFFFFF;stroke-width:0.5;" x1="1142.6623" x2="1142.6623" y1="386.0152" y2="402.5034" />
+         </a>
+        </g><!--entity CoreBankingSystem-->
+        <g id="elem_CoreBankingSystem">
+         <a href="../core-banking-system/context/" target="_self" title="../core-banking-system/context/" xlink:actuate="onRequest" xlink:href="../core-banking-system/context/" xlink:show="new" xlink:title="../core-banking-system/context/" xlink:type="simple">
+          <rect fill="#1168BD" height="141.7734" rx="2.5" ry="2.5" style="stroke:#0B4884;stroke-width:0.5;" width="247.3223" x="468.34" y="499.9283" />
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="38.2656" x="504.9582" y="525.397">Core</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="5.2734" x="543.2238" y="525.397">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="66.3828" x="548.4972" y="525.397">Banking</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="5.2734" x="614.88" y="525.397">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="58.8906" x="620.1535" y="525.397">System</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="589.7863" y="542.3072">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="53.7441" x="517.7321" y="558.7955">Kuwego</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="571.4762" y="558.7955">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="31.8145" x="575.9059" y="558.7955">Core</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="607.7204" y="558.7955">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="54.1201" x="612.1501" y="558.7955">Banking</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48.0977" x="521.6525" y="575.2838">System</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="569.7502" y="575.2838">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="11.1836" x="574.1798" y="575.2838">is</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="585.3634" y="575.2838">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="21.7246" x="589.7931" y="575.2838">the</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="611.5177" y="575.2838">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="46.4023" x="615.9474" y="575.2838">central</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="74.2383" x="500.6559" y="591.772">foundation</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="574.8942" y="591.772">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="13.7471" x="579.3239" y="591.772">of</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="593.071" y="591.772">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="85.8457" x="597.5006" y="591.772">MoniePoint's</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="54.8789" x="526.1574" y="608.2603">banking</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="581.0363" y="608.2603">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="72.3789" x="585.466" y="608.2603">operations</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="131.4688" x="482.7697" y="626.7486">Development Team</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="77.7656" x="623.2824" y="626.7486">Core Team</text>
+          <line style="stroke:#FFFFFF;stroke-width:0.5;" x1="478.34" x2="705.6623" y1="613.2134" y2="613.2134" />
+          <line style="stroke:#FFFFFF;stroke-width:0.5;" x1="478.34" x2="705.6623" y1="629.7017" y2="629.7017" />
+          <line style="stroke:#FFFFFF;stroke-width:0.5;" x1="478.34" x2="478.34" y1="613.2134" y2="629.7017" />
+          <line style="stroke:#FFFFFF;stroke-width:0.5;" x1="618.6681" x2="618.6681" y1="613.2134" y2="629.7017" />
+          <line style="stroke:#FFFFFF;stroke-width:0.5;" x1="705.6623" x2="705.6623" y1="613.2134" y2="629.7017" />
+         </a>
+        </g><!--entity Customer-->
+        <g id="elem_Customer">
+         <rect fill="#DDDDDD" height="136.3086" rx="2.5" ry="2.5" style="stroke:#9A9A9A;stroke-width:0.5;" width="206.0674" x="35.97" y="44.4883" />
+         <image height="48" width="48" x="115.0037" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAACDklEQVR4Xu2YgWrCMBCGfbg93B5uryAigogIIiKICB3fICD3r+kludkG9sMH43dtcsn1cu1qvV6vekaM3hCjlf1+P1wul+F2uw33+/2H6/U6nE6nYbvdftr/b0WMWo7H4/B8PocpEdhut/uy19ciRimbzeaDVS4VO2LvVYMYJTB5z6qP6Xw+NwchRgk1K29F6tn7liCGF1IgSuykvb8XMTwwoJ1Ei6hadgwvYnhg26Nlx/AihgdKYbQ4P+w4HsTw0FJ5xlRbVsXwYAePUG1JFcODHTxCbw3g8XjY8ZtVex6I4YHmLFpvfYijyyhFwY7hRQwvkZWoNv9BDC9dtxKJiAPtcDhUrz6IUQIr11KRag+vV8SooWYnWlc+IUYtTMizG5Tglpy3iNEK77ukBhNlZ4B2mdIbOfGEGL0hRm+I4YHvO+Q8qcIhBCWfSrg2XUdq0UbUppcYOZhw7kHlt5TvTIqggL+5dqpa8XtpTyTGb3DTyNZhSgTi3RExLJEtQ4nYTc+nSDFeie46S8WuT+2EGAly195wDpFOdm6uAKYeuHcq13aIAUtZ/SSeBzvHbACUwqVp7IEWA3K1fi6NvfSLAfbiJWjstVOM6A+3UaK7tXPtKoCxcirGfwB/pO4DcD8D8M7O06uxLxhiwNxNnFWuqRMjQd1dgjhUc297YrxC1LzM0EzNQW7irgB6QIze+AYz2wyl7PNxjQAAAABJRU5ErkJggg==" y="54.4883" />
+         <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="79.8203" x="99.0935" y="117.957">Customer</text>
+         <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="136.7888" y="134.8672">&nbsp;</text>
+         <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="9.6592" x="46.1956" y="151.3555">A</text>
+         <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="55.8548" y="151.3555">&nbsp;</text>
+         <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="44.3584" x="60.2845" y="151.3555">typical</text>
+         <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="104.6429" y="151.3555">&nbsp;</text>
+         <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="54.8789" x="109.0725" y="151.3555">banking</text>
+         <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="163.9514" y="151.3555">&nbsp;</text>
+         <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="63.4307" x="168.3811" y="151.3555">customer</text>
+         <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="26.8926" x="45.97" y="167.8438">that</text>
+         <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="72.8626" y="167.8438">&nbsp;</text>
+         <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="40.5508" x="77.2923" y="167.8438">banks</text>
+         <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="117.843" y="167.8438">&nbsp;</text>
+         <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28.7588" x="122.2727" y="167.8438">with</text>
+         <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="151.0315" y="167.8438">&nbsp;</text>
+         <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="76.5762" x="155.4612" y="167.8438">Moniepoint</text>
+        </g><!--entity NIBSSICAD-->
+        <g id="elem_NIBSSICAD">
+         <rect fill="#686868" height="121.2852" rx="2.5" ry="2.5" style="stroke:#484848;stroke-width:0.5;" width="206.8809" x="488.56" y="733.6983" />
+         <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="45.9609" x="545.7973" y="759.167">NIBSS</text>
+         <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="5.2734" x="591.7582" y="759.167">&nbsp;</text>
+         <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="41.1719" x="597.0317" y="759.167">ICAD</text>
+         <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="589.7856" y="776.0772">&nbsp;</text>
+         <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="38.0215" x="530.4462" y="792.5655">NIBBS</text>
+         <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="568.4677" y="792.5655">&nbsp;</text>
+         <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="54.5029" x="572.8974" y="792.5655">Handles</text>
+         <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="627.4003" y="792.5655">&nbsp;</text>
+         <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="21.7246" x="631.83" y="792.5655">the</text>
+         <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="92.7568" x="498.56" y="809.0538">infrastructure</text>
+         <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="591.3168" y="809.0538">&nbsp;</text>
+         <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="19.4756" x="595.7465" y="809.0538">for</text>
+         <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="615.2221" y="809.0538">&nbsp;</text>
+         <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="65.7891" x="619.6518" y="809.0538">payments</text>
+         <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56.9229" x="501.0483" y="825.542">between</text>
+         <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="557.9711" y="825.542">&nbsp;</text>
+         <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="58.4063" x="562.4008" y="825.542">different</text>
+         <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="620.8071" y="825.542">&nbsp;</text>
+         <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="40.5508" x="625.2368" y="825.542">banks</text>
+         <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="665.7875" y="825.542">&nbsp;</text>
+         <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="12.7354" x="670.2172" y="825.542">in</text>
+         <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="52.8555" x="565.5727" y="842.0303">Nigeria.</text>
+        </g><!--link CoreBankingSystem to NIBSSICAD-->
+        <g id="link_CoreBankingSystem_NIBSSICAD">
+         <path d="M592,641.9083 C592,671.3183 592,697.1683 592,725.3983 " fill="none" id="CoreBankingSystem-to-NIBSSICAD" style="stroke:#707070;stroke-width:1.0;" />
+         <polygon fill="#707070" points="592,733.3983,595,725.3983,589,725.3983,592,733.3983" style="stroke:#707070;stroke-width:1.0;" />
+         <text fill="#707070" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="29.9063" x="593" y="686.2998">Push</text>
+         <text fill="#707070" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="3.9551" x="622.9063" y="686.2998">&nbsp;</text>
+         <text fill="#707070" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="42.2168" x="626.8613" y="686.2998">Branch</text>
+         <text fill="#707070" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="3.9551" x="669.0781" y="686.2998">&nbsp;</text>
+         <text fill="#707070" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="22.8867" x="673.0332" y="686.2998">and</text>
+         <text fill="#707070" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="49.8984" x="611.2695" y="700.4327">Account</text>
+         <text fill="#707070" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="3.9551" x="661.168" y="700.4327">&nbsp;</text>
+         <text fill="#707070" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="12.5273" x="665.123" y="700.4327">to</text>
+        </g><!--link ValueAddedServicesVAS to CoreBankingSystem-->
+        <g id="link_ValueAddedServicesVAS_CoreBankingSystem">
+         <path d="M696.03,424.2083 C678.74,448.4083 664.0889,468.9077 646.8589,493.0377 " fill="none" id="ValueAddedServicesVAS-to-CoreBankingSystem" style="stroke:#707070;stroke-width:1.0;" />
+         <polygon fill="#707070" points="642.21,499.5483,649.3004,494.781,644.4174,491.2944,642.21,499.5483" style="stroke:#707070;stroke-width:1.0;" />
+         <text fill="#707070" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="33.2637" x="675" y="466.5298">Debit</text>
+         <text fill="#707070" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="3.9551" x="708.2637" y="466.5298">&nbsp;</text>
+         <text fill="#707070" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="22.8867" x="712.2188" y="466.5298">and</text>
+         <text fill="#707070" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="3.9551" x="735.1055" y="466.5298">&nbsp;</text>
+         <text fill="#707070" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="57.4512" x="739.0605" y="466.5298">Crediting</text>
+        </g><!--link CardServices to CoreBankingSystem-->
+        <g id="link_CardServices_CoreBankingSystem">
+         <path d="M912.65,414.8783 C878.15,432.9383 840.19,452.4983 805,469.9283 C776.36,484.1183 752.5684,495.5617 723.2884,509.3417 " fill="none" id="CardServices-to-CoreBankingSystem" style="stroke:#707070;stroke-width:1.0;" />
+         <polygon fill="#707070" points="716.05,512.7483,724.5659,512.0561,722.011,506.6273,716.05,512.7483" style="stroke:#707070;stroke-width:1.0;" />
+         <text fill="#707070" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="47.4668" x="836" y="466.5298">Process</text>
+         <text fill="#707070" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="3.9551" x="883.4668" y="466.5298">&nbsp;</text>
+         <text fill="#707070" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="73.207" x="887.4219" y="466.5298">Transaction</text>
+        </g><!--link MoniepointFX to CoreBankingSystem-->
+        <g id="link_MoniepointFX_CoreBankingSystem">
+         <path d="M238.14,406.7183 C249.51,412.6283 260.97,418.4783 272,423.9283 C336.03,455.5983 401.078,485.5202 460.758,512.2302 " fill="none" id="MoniepointFX-to-CoreBankingSystem" style="stroke:#707070;stroke-width:1.0;" />
+         <polygon fill="#707070" points="468.06,515.4983,461.9835,509.492,459.5324,514.9685,468.06,515.4983" style="stroke:#707070;stroke-width:1.0;" />
+         <text fill="#707070" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="47.4668" x="368" y="466.5298">Process</text>
+         <text fill="#707070" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="3.9551" x="415.4668" y="466.5298">&nbsp;</text>
+         <text fill="#707070" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="73.207" x="419.4219" y="466.5298">Transaction</text>
+        </g><!--link CustomerOnboarding to CoreBankingSystem-->
+        <g id="link_CustomerOnboarding_CoreBankingSystem">
+         <path d="M476.82,406.4983 C496.64,434.5983 516.5607,462.8396 537.8707,493.0696 " fill="none" id="CustomerOnboarding-to-CoreBankingSystem" style="stroke:#707070;stroke-width:1.0;" />
+         <polygon fill="#707070" points="542.48,499.6083,540.3227,491.3411,535.4187,494.7981,542.48,499.6083" style="stroke:#707070;stroke-width:1.0;" />
+         <text fill="#707070" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="39.9844" x="521" y="466.5298">Create</text>
+         <text fill="#707070" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="3.9551" x="560.9844" y="466.5298">&nbsp;</text>
+         <text fill="#707070" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="49.8984" x="564.9395" y="466.5298">Account</text>
+        </g><!--link Customer to MoniepointFX-->
+        <g id="link_Customer_MoniepointFX">
+         <path d="M139,180.9883 C139,217.8383 139,254.8583 139,289.2883 " fill="none" id="Customer-to-MoniepointFX" style="stroke:#707070;stroke-width:1.0;" />
+         <polygon fill="#707070" points="139,297.2883,142,289.2883,136,289.2883,139,297.2883" style="stroke:#707070;stroke-width:1.0;" />
+         <text fill="#707070" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="29.4375" x="140" y="223.3998">Uses</text>
+        </g>
+        <rect fill="none" height="16.4883" style="stroke:none;stroke-width:1.0;" width="294.5264" x="849.4736" y="878.9834" />
+        <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="52.2539" x="849.4736" y="892.5186">Legend</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="901.7275" y="892.5186">&nbsp;</text>
+        <rect fill="none" height="16.4883" style="stroke:none;stroke-width:1.0;" width="294.5264" x="849.4736" y="895.4717" />
+        <text fill="#444444" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8.4287" x="853.9033" y="909.0069">▯</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="862.332" y="909.0069">&nbsp;</text>
+        <text fill="#444444" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="64.374" x="871.1914" y="909.0069">boundary</text>
+        <text fill="#444444" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="41.4893" x="939.9951" y="909.8506">(dashed)</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="981.4844" y="909.0069">&nbsp;</text>
+        <rect fill="#686868" height="16.4883" style="stroke:none;stroke-width:1.0;" width="294.5264" x="849.4736" y="911.96" />
+        <text fill="#484848" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8.4287" x="853.9033" y="925.4952">▯</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="862.332" y="925.4952">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="223.46" x="871.1914" y="925.4952">Software System,External System</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="29.8193" x="1099.0811" y="926.3389">(solid)</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="1128.9004" y="925.4952">&nbsp;</text>
+        <rect fill="#1168BD" height="16.4883" style="stroke:none;stroke-width:1.0;" width="294.5264" x="849.4736" y="928.4483" />
+        <text fill="#0B4884" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8.4287" x="853.9033" y="941.9834">▯</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="862.332" y="941.9834">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="111.0977" x="871.1914" y="941.9834">Software System</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="29.8193" x="986.7188" y="942.8272">(solid)</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="1016.5381" y="941.9834">&nbsp;</text>
+        <rect fill="#686868" height="16.4883" style="stroke:none;stroke-width:1.0;" width="294.5264" x="849.4736" y="944.9366" />
+        <text fill="#484848" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8.4287" x="853.9033" y="958.4717">▯</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="862.332" y="958.4717">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="222.1133" x="871.1914" y="958.4717">Software System,Existing System</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="29.8193" x="1097.7344" y="959.3155">(solid)</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="1127.5537" y="958.4717">&nbsp;</text>
+        <rect fill="#DDDDDD" height="16.4883" style="stroke:none;stroke-width:1.0;" width="294.5264" x="849.4736" y="961.4248" />
+        <text fill="#9A9A9A" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8.4287" x="853.9033" y="974.96">▯</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="862.332" y="974.96">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="45.6914" x="871.1914" y="974.96">Person</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="29.8193" x="921.3125" y="975.8038">(solid)</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="951.1318" y="974.96">&nbsp;</text>
+        <text fill="#707070" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="14" x="853.9033" y="991.4483">─</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="867.9033" y="991.4483">&nbsp;</text>
+        <text fill="#707070" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="83.6855" x="876.7627" y="991.4483">Relationship</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="964.8779" y="991.4483">&nbsp;</text>
+        <rect fill="#66622E" height="16.4883" style="stroke:none;stroke-width:1.0;" width="294.5264" x="849.4736" y="994.4014" />
+        <text fill="#CCCCCC" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8.4287" x="853.9033" y="1007.9366">▯</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="862.332" y="1007.9366">&nbsp;</text>
+        <text fill="#CCCCCC" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="145.3799" x="871.1914" y="1007.9366">Moniepoint boundary</text>
+        <text fill="#CCCCCC" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="118.5693" x="1021.001" y="1008.7803">(last back color, dashed)</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297" x="1139.5703" y="1007.9366">&nbsp;</text>
+        <line style="stroke:none;stroke-width:1.0;" x1="849.4736" x2="1144" y1="878.9834" y2="878.9834" />
+        <line style="stroke:none;stroke-width:1.0;" x1="849.4736" x2="1144" y1="895.4717" y2="895.4717" />
+        <line style="stroke:none;stroke-width:1.0;" x1="849.4736" x2="1144" y1="911.96" y2="911.96" />
+        <line style="stroke:none;stroke-width:1.0;" x1="849.4736" x2="1144" y1="928.4483" y2="928.4483" />
+        <line style="stroke:none;stroke-width:1.0;" x1="849.4736" x2="1144" y1="944.9366" y2="944.9366" />
+        <line style="stroke:none;stroke-width:1.0;" x1="849.4736" x2="1144" y1="961.4248" y2="961.4248" />
+        <line style="stroke:none;stroke-width:1.0;" x1="849.4736" x2="1144" y1="977.9131" y2="977.9131" />
+        <line style="stroke:none;stroke-width:1.0;" x1="849.4736" x2="1144" y1="994.4014" y2="994.4014" />
+        <line style="stroke:none;stroke-width:1.0;" x1="849.4736" x2="1144" y1="1010.8897" y2="1010.8897" />
+        <line style="stroke:none;stroke-width:1.0;" x1="849.4736" x2="849.4736" y1="878.9834" y2="1010.8897" />
+        <line style="stroke:none;stroke-width:1.0;" x1="1144" x2="1144" y1="878.9834" y2="1010.8897" />
+       </g>
+      </svg>
+     </div>
+     <div class="has-text-centered">
+      System Landscape Diagram [<a href="../svg/SystemLandscape.svg" target="_blank">svg</a>|<a href="../png/SystemLandscape.png" target="_blank">png</a>|<a href="../puml/SystemLandscape.puml" target="_blank">puml</a>]
+     </div>
+    </div>
+   </div>
+   <button class="modal-close is-large" aria-label="close" onclick="closeModal('SystemLandscape-modal')"></button>
+  </div>
+ </div></p></div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="../../admonition.js"></script>
+    <script type="text/javascript" src="../../reformat-mermaid.js"></script>
+    <script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.3.0/dist/mermaid.esm.min.mjs';</script>
+    <script type="text/javascript" src="../../katex-render.js"></script>
+  </body>
+</html>

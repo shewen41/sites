@@ -1,0 +1,44 @@
+@startuml
+set separator none
+title System Context of Core Banking System
+
+top to bottom direction
+
+!include <C4/C4>
+!include <C4/C4_Context>
+
+AddElementTag("Software System,External System", $bgColor="#686868", $borderColor="#484848", $fontColor="#ffffff", $sprite="", $shadowing="", $borderStyle="solid")
+AddElementTag("Software System", $bgColor="#1168bd", $borderColor="#0b4884", $fontColor="#ffffff", $sprite="", $shadowing="", $borderStyle="solid")
+AddElementTag("Software System,Existing System", $bgColor="#686868", $borderColor="#484848", $fontColor="#ffffff", $sprite="", $shadowing="", $borderStyle="solid")
+
+AddRelTag("Relationship", $textColor="#707070", $lineColor="#707070", $lineStyle = "")
+
+AddBoundaryTag("Moniepoint", $borderColor="#cccccc", $fontColor="#cccccc", $borderStyle="dashed")
+Boundary(group_1, "Moniepoint", $tags="Moniepoint") {
+  WithoutPropertyHeader()
+  AddProperty("Development Team","FX Team")
+  System(MoniepointFX, "Moniepoint FX", $descr="Allows customer to make international transfers", $tags="Software System,Existing System", $link="")
+  WithoutPropertyHeader()
+  AddProperty("Development Team","Onboarding Team")
+  System(CustomerOnboarding, "Customer Onboarding", $descr="Manages customer onboarding process", $tags="Software System,Existing System", $link="")
+  WithoutPropertyHeader()
+  AddProperty("Development Team","Core Team")
+  System(ValueAddedServicesVAS, "Value Added Services (VAS)", $descr="Allows customer to purchase airtime, bill payment, BVN Check Service e.t.c", $tags="Software System", $link="")
+  WithoutPropertyHeader()
+  AddProperty("Development Team","Core Team")
+  System(CardServices, "Card Services", $descr="Manages Customer Card Operation inluding issuing, spending e.t.c", $tags="Software System", $link="")
+  WithoutPropertyHeader()
+  AddProperty("Development Team","Core Team")
+  System(CoreBankingSystem, "Core Banking System", $descr="Kuwego Core Banking System is the central foundation of MoniePoint's banking operations", $tags="Software System", $link="")
+}
+
+System(NIBSSICAD, "NIBSS ICAD", $descr="NIBBS Handles the infrastructure for payments between different banks in Nigeria.", $tags="Software System,External System", $link="")
+
+Rel(CoreBankingSystem, NIBSSICAD, "Push Branch and Account to", $techn="", $tags="Relationship", $link="")
+Rel(ValueAddedServicesVAS, CoreBankingSystem, "Debit and Crediting", $techn="", $tags="Relationship", $link="")
+Rel(CardServices, CoreBankingSystem, "Process Transaction", $techn="", $tags="Relationship", $link="")
+Rel(MoniepointFX, CoreBankingSystem, "Process Transaction", $techn="", $tags="Relationship", $link="")
+Rel(CustomerOnboarding, CoreBankingSystem, "Create Account", $techn="", $tags="Relationship", $link="")
+
+SHOW_LEGEND(true)
+@enduml

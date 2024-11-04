@@ -1,0 +1,43 @@
+@startuml
+set separator none
+title Core Banking System - Containers
+
+top to bottom direction
+
+!include <C4/C4>
+!include <C4/C4_Context>
+!include <C4/C4_Container>
+
+AddElementTag("Software System,External System", $bgColor="#686868", $borderColor="#484848", $fontColor="#ffffff", $sprite="", $shadowing="", $borderStyle="solid")
+AddElementTag("Container,queue", $bgColor="#438dd5", $borderColor="#2e6295", $fontColor="#ffffff", $sprite="", $shadowing="", $borderStyle="solid")
+AddElementTag("Container,Database", $bgColor="#438dd5", $borderColor="#2e6295", $fontColor="#ffffff", $sprite="", $shadowing="", $borderStyle="solid")
+AddElementTag("Container", $bgColor="#438dd5", $borderColor="#2e6295", $fontColor="#ffffff", $sprite="", $shadowing="", $borderStyle="solid")
+
+AddRelTag("Relationship", $textColor="#707070", $lineColor="#707070", $lineStyle = "")
+
+AddBoundaryTag("Software System", $bgColor="#ffffff", $borderColor="#0b4884", $fontColor="#0b4884", $shadowing="", $borderStyle="solid")
+
+System(NIBSSICAD, "NIBSS ICAD", $descr="NIBBS Handles the infrastructure for payments between different banks in Nigeria.", $tags="Software System,External System", $link="")
+
+System_Boundary("CoreBankingSystem_boundary", "Core Banking System", $tags="Software System") {
+  ContainerDb(CoreBankingSystem.CBADatabase, "CBA Database", $techn="Database", $descr="MySQL Database", $tags="Container,Database", $link="")
+  ContainerDb(CoreBankingSystem.CBASpannerDatabase, "CBA Spanner Database", $techn="Database", $descr="Spanner Database", $tags="Container,Database", $link="")
+  ContainerDb(CoreBankingSystem.BigTableDatabase, "BigTable Database", $techn="", $descr="Database", $tags="Container,Database", $link="")
+  Container(CoreBankingSystem.ICADDatabase, "ICAD Database", $techn="Database", $descr="MySQL Database", $tags="Container", $link="")
+  Container(CoreBankingSystem.CBAAPI, "CBA API", $techn="Java and Springboot", $descr="Manages key financial functions like Customer Management, Ledger, and Journal Operations functionality via a JSON/HTTPS API.", $tags="Container", $link="")
+  Container(CoreBankingSystem.MoniepointICAD, "Moniepoint ICAD", $techn="Java and Springboot", $descr="Manages integration with NIBSS ICAD.", $tags="Container", $link="")
+  ContainerQueue(CoreBankingSystem.Kafka, "Kafka", $techn="", $descr="Queue", $tags="Container,queue", $link="")
+  Container(CoreBankingSystem.TAJS, "TAJS", $techn="Java and Springboot", $descr="A Job service that manages job throttling", $tags="Container", $link="")
+}
+
+Rel(CoreBankingSystem.MoniepointICAD, NIBSSICAD, "Push Branch and Account to", $techn="", $tags="Relationship", $link="")
+Rel(CoreBankingSystem.CBAAPI, CoreBankingSystem.Kafka, "Emmit branch created and account created event", $techn="", $tags="Relationship", $link="")
+Rel(CoreBankingSystem.Kafka, CoreBankingSystem.MoniepointICAD, "Consume branch created and account created event", $techn="", $tags="Relationship", $link="")
+Rel(CoreBankingSystem.MoniepointICAD, CoreBankingSystem.CBAAPI, "Get Account Details", $techn="", $tags="Relationship", $link="")
+Rel(CoreBankingSystem.MoniepointICAD, CoreBankingSystem.BigTableDatabase, "Get Customer Details", $techn="", $tags="Relationship", $link="")
+Rel(CoreBankingSystem.CBAAPI, CoreBankingSystem.CBADatabase, "Reads and Write", $techn="", $tags="Relationship", $link="")
+Rel(CoreBankingSystem.CBADatabase, CoreBankingSystem.BigTableDatabase, "Syncs", $techn="", $tags="Relationship", $link="")
+Rel(CoreBankingSystem.CBADatabase, CoreBankingSystem.CBASpannerDatabase, "Syncs", $techn="", $tags="Relationship", $link="")
+
+SHOW_LEGEND(true)
+@enduml
